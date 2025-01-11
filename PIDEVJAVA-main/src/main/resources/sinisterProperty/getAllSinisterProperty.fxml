@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" stylesheets="@../tableau.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.sinisterProperty.getAllSinisterPropertyController">
+    <children>
+      
+            <TableView fx:id="sinisterTableView" layoutY="126.0" prefHeight="220.0" style="-fx-background-color: white;">
+                <columns>
+
+                    <TableColumn fx:id="dateColumn" prefWidth="150" text="Date of Sinister">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="date_sinister" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="locationColumn" prefWidth="150" text="Location">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="location" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="labelStatusSinister" prefWidth="150" text="Status">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="status_sinister" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="damageTypeColumn" prefWidth="150" text="Type of Damage">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="type_degat" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn fx:id="actionColumn" prefWidth="200" text="Action" />
+                </columns>
+            </TableView>
+      <HBox layoutX="25.0" layoutY="24.0" prefHeight="56.0" prefWidth="328.0" spacing="30.0">
+         <children>
+            <Label text="Trier par status :" />
+            <ComboBox fx:id="filterComboBox" onAction="#handleFilterChange" prefWidth="150.0" />
+         </children>
+      </HBox>
+        <HBox layoutX="31.0" layoutY="67.0" prefHeight="55.0" prefWidth="307.0" spacing="20.0">
+            <children>
+                <Label text="Trier par date :" />
+                <ComboBox fx:id="filterOrderByDate" onAction="#handleFilterChangeOrderByDate">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="all" />
+                            <String fx:value="asc" />
+                            <String fx:value="desc" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </HBox>
+        <HBox layoutX="459.0" layoutY="14.0" prefHeight="56.0" prefWidth="328.0" spacing="30.0">
+            <children>
+                <Label text="Search:" />
+                <TextField fx:id="keywordTextField" onKeyReleased="#addSinisterPropertySearch" prefWidth="150.0" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

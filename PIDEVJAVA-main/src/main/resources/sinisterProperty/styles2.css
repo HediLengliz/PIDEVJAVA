@@ -1,0 +1,82 @@
+.root {
+    -fx-background-color: #F5F6FA;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 12px;
+}
+
+.text-field, .text-area, .date-picker {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0, 0, 1, 0;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-insets: 0, 0, 1, 0;
+    -fx-border-color: #BDBDBD;
+}
+
+.button {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.title-label {
+    -fx-font-size: 30px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #301bef;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.0, 0, 1);
+}
+
+.vbox {
+    -fx-spacing: 10px;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 4px 10px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #0099FF;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+}
+
+.save-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+.text-field:disabled, .text-area:disabled, .date-picker:disabled {
+    -fx-opacity: 1.0;
+}
+
+.text-field.error, .text-area.error, .date-picker.error {
+    -fx-border-color: red;
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}

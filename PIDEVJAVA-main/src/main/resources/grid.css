@@ -1,0 +1,37 @@
+/* Table style for the GridPane */
+.grid-pane {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-spacing: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: #dee2e6; /* Border color for the entire GridPane */
+}
+
+.table-header
+{
+
+    -fx-text-fill: #1f1f1f;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-alignment: center-right; /* Changed alignment to center-right */
+    -fx-border-width: 1px;
+    -fx-border-color: #dee2e6; /* Border color for header */
+
+}
+
+
+/* Table cell style */
+.table-cell {
+    -fx-padding: 8px;
+    -fx-border-width: 0px;
+    -fx-border-color: #dee2e6; /* Border color for cells */
+}
+.card {
+    -fx-padding: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #dee2e6;
+    -fx-background-color: white;
+}
+
+
+

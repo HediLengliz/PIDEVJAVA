@@ -1,0 +1,42 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;  /* Dark gray for general text for better readability */
+    -fx-padding: 2px 4px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-background-color: transparent;
+    -fx-font-weight: normal;
+}
+
+.detail-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555;  /* Medium gray to differentiate details while keeping them readable */
+    -fx-padding: 5px;
+    -fx-background-color: transparent;  /* Background kept transparent for cleanliness */
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-border-radius: 0px;
+}
+
+.header-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A237E;  /* Indigo blue for headers to make them distinct and noticeable */
+    -fx-background-color: transparent;
+}
+
+.error-label {
+    -fx-text-fill: #D32F2F;  /* Bright red for errors to catch user attention immediately */
+    -fx-font-size: 12px;
+}
+
+/* Labels in HBoxes */
+.HBox .label {
+    -fx-text-fill: #304FFE; /* Vivid blue for labels specifically in HBoxes */
+}
+
+/* Additional styles for containers */
+.VBox, .HBox {
+    -fx-background-color: transparent;  /* Containers are transparent */
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+}

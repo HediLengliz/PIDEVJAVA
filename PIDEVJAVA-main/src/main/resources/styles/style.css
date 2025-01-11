@@ -1,0 +1,60 @@
+.button {
+    -fx-background-color: #1976D2; /* Blue */
+    -fx-text-fill: #FFFFFF; /* White */
+}
+
+.button:hover {
+    -fx-background-color: #F0F8FF; /* Light Mauve */
+}
+
+.button:pressed {
+    -fx-background-color: #3B299B; /* Darker Blue */
+}
+
+.scroll-pane {
+    -fx-background-color: #F0F8FF; /* Light Mauve */
+}
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.increment-button,
+.decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #F0F8FF; /* Blue */
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #B0C4DE; /* Light Mauve */
+}
+
+.VBox {
+    -fx-background-color: #FFFFFF; /* Background Color */
+    -fx-background-radius: 10px; /* Border Radius */
+}
+
+.text-field {
+    -fx-background-radius: 10px; /* Border Radius */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2); /* Shadow */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-background-insets: 0;
+    -fx-background-radius: 8px 8px 0px 0px;
+}

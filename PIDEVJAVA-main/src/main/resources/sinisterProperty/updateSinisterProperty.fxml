@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.sinisterProperty.GetByUserIdSinisterPropertyController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="10">
+            <Label text="Update Sinister Property" style="-fx-font-size: 18px;" />
+            <HBox spacing="10">
+                <Label text="Date:" />
+                <TextField fx:id="dateField" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Location:" />
+                <TextField fx:id="locationField" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Type of Damage:" />
+                <TextField fx:id="typeDamageField" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Description of Damage:" />
+                <TextArea fx:id="descriptionField" prefWidth="200" prefHeight="100" />
+            </HBox>
+            <Button text="Update" onAction="#handleUpdate" />
+        </VBox>
+    </children>
+</AnchorPane>

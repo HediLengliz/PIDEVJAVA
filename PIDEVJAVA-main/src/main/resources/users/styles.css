@@ -1,0 +1,27 @@
+.table-cell {
+    -fx-alignment: CENTER; /* Center align the content within the cell */
+}
+
+.action-button {
+    -fx-background-color: rgba(63, 117, 238, 0.93); /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.action-button:hover {
+    -fx-background-color: #3c78fc; /* Darker green */
+}
+
+.action-button-delete {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.action-button-delete:hover {
+    -fx-background-color: #d32f2f; /* Darker red */
+}
+
+.button-box {
+    -fx-alignment: CENTER; /* Center align the content within the HBox */
+}

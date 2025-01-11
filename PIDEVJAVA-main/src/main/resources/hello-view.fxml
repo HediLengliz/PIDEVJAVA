@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?package tn.esprit.controller.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.addarticle">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="798.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Article">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Button fx:id="onHelloButtonClick" layoutX="346.0" layoutY="308.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Create" />
+      <Text layoutX="29.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+      <Text layoutX="10.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <Text layoutX="304.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <Text layoutX="18.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authorname" />
+      <Text layoutX="304.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category" />
+      <Text layoutX="315.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image" />
+      <TextField fx:id="titleField" layoutX="110.0" layoutY="99.0" promptText="Article Tile" />
+      <TextField fx:id="authornameField" layoutX="110.0" layoutY="316.0" promptText="author...." />
+      <DatePicker fx:id="datePub" layoutX="359.0" layoutY="129.0" promptText="1/1/2024" />
+      <TextArea fx:id="descriptionArea" layoutX="110.0" layoutY="146.0" prefHeight="150.0" prefWidth="150.0" promptText="description..." />
+      <ComboBox fx:id="comboBox" layoutX="371.0" layoutY="194.0" mouseTransparent="true" prefWidth="150.0" promptText="choose a categorie" />
+      <Button layoutX="371.0" layoutY="249.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: darkblue;" text="Choose an Image" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.shape.Line?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controllers.User.dashboardController"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane fx:id="addEmployee_form" layoutX="35.0" layoutY="78.0" prefHeight="555.0" prefWidth="889.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+
+
+
+
+                <children>
+                    <AnchorPane prefHeight="303.0" prefWidth="859.0" stylesheets="@../dashboardDesign.css">
+                        <styleClass>
+                            <String fx:value="white-bg" />
+                            <String fx:value="shadow" />
+                        </styleClass>
+                        <children>
+                            <TableView fx:id="addEmployee_tableView" layoutX="10.0" layoutY="62.0" prefHeight="227.0" prefWidth="840.0">
+                                <columns>
+                                    <TableColumn fx:id="col_userID" prefWidth="84.0" text="User ID" />
+                                    <TableColumn fx:id="col_firstName" prefWidth="111.0" text="First Name" />
+                                    <TableColumn fx:id="col_lastName" prefWidth="126.0" text="Last Name" />
+                                    <TableColumn fx:id="col_cin" prefWidth="154.0" text="Cin" />
+                                    <TableColumn fx:id="col_email" prefWidth="139.0" text="Email" />
+                                    <TableColumn fx:id="col_address" prefWidth="100.0" text="Address" />
+                                    <TableColumn fx:id="col_phoneNum" prefWidth="125.0" text="Phone #" />
+
+
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="addEmployee_search" layoutX="14.0" layoutY="14.0" onKeyTyped="#addEmployeeSearch" prefHeight="30.0" prefWidth="277.0" promptText="Seach" styleClass="search" stylesheets="@../dashboardDesign.css" />
+                            <FontAwesomeIconView glyphName="SEARCH" layoutX="21.0" layoutY="35.0" size="1.5em" />
+                        </children>
+                    </AnchorPane>
+                    <Label layoutX="36.0" layoutY="332.0" text="User ID:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_id" editable="false" layoutX="117.0" layoutY="329.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+                    <Label layoutX="35.0" layoutY="371.0" text="First Name:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_firstName" layoutX="117.0" layoutY="367.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+                    <Label layoutX="36.0" layoutY="409.0" text="Last Name:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField visible="false" fx:id="selectedUser_claims" layoutX="117.0" layoutY="367.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+                    <Label layoutX="36.0" layoutY="409.0" text="Last Name:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_lastName" layoutX="117.0" layoutY="405.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+                    <Label layoutX="35.0" layoutY="448.0" text="Role:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <CheckComboBox fx:id="selectedUser_role" layoutX="117.0" layoutY="444.0" prefHeight="26.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css">
+                        <items>
+                            <String fx:value="Expert" />
+                            <String fx:value="Pharmacist" />
+                            <String fx:value="Doctor" />
+                            <String fx:value="Agent" />
+                            <String fx:value="Sous Admin" />
+                            <String fx:value="Admin" />
+                            <String fx:value="Super Admin" />
+
+                        </items>
+                    </CheckComboBox>
+
+                    <Label layoutX="320.0" layoutY="332.0" text="Phone #:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_phoneNum" layoutX="401.0" layoutY="329.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+                    <Label layoutX="320.0" layoutY="371.0" text="Email:">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_email" layoutX="401.0" layoutY="367.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+
+                    <Label layoutX="320.0" layoutY="409.0" text="CIN :">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="selectedUser_cin" layoutX="401.0" layoutY="405.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@../dashboardDesign.css" />
+
+
+
+                    <AnchorPane layoutX="626.0" layoutY="250.0" prefHeight="127.0" prefWidth="101.0" stylesheets="@../dashboardDesign.css">
+
+
+                        <TextArea fx:id="selectedUser_address" layoutX="25.0" layoutY="75.0" prefHeight="101.0" prefWidth="184.0" />
+
+
+                    </AnchorPane>
+                    <Button fx:id="addEmployee_addBtn" layoutX="701.0" layoutY="469.0" mnemonicParsing="false" onAction="#addEmployeeAdd" prefHeight="41.0" prefWidth="94.0" styleClass="add-btn" stylesheets="@../dashboardDesign.css" text="Add" />
+                    <Button fx:id="addEmployee_updateBtn" layoutX="588.0" layoutY="469.0" mnemonicParsing="false" onAction="#addEmployeeUpdate" prefHeight="41.0" prefWidth="94.0" styleClass="update-btn" stylesheets="@../dashboardDesign.css" text="Update" />
+                    <Button fx:id="addEmployee_deleteBtn" layoutX="433.0" layoutY="469.0" mnemonicParsing="false" onAction="#addEmployeeDelete" prefHeight="41.0" prefWidth="94.0" styleClass="delete-btn" stylesheets="@../dashboardDesign.css" text="Block" />
+                    <Button fx:id="addEmployee_clearBtn" layoutX="320.0" layoutY="469.0" mnemonicParsing="false" onAction="#addEmployeeReset" prefHeight="41.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@../dashboardDesign.css" text="Clear" />
+                    <Label layoutX="588.0" layoutY="333.0" text="Address :">
+                        <font>
+                            <Font name="Tahoma" size="14.0" />
+                        </font>
+                    </Label>
+                </children>
+                <styleClass>
+                    <String fx:value="white-bg" />
+                    <String fx:value="shadow" />
+                </styleClass>
+            </AnchorPane>
+</AnchorPane>

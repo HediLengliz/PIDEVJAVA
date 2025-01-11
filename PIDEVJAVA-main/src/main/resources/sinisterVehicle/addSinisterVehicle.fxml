@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.sinisterVehicle.SinisterVehicleController">
+    <children>
+        <Pane prefHeight="61.0" prefWidth="1126.0" style="-fx-background-color: #5462ff;">
+            <children>
+                <Label layoutX="13.0" layoutY="12.0" text="ProTechtini" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnHome" layoutX="739.0" layoutY="18.0" mnemonicParsing="false" onAction="#backHome" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #5462ff; -fx-text-fill: #FFFFFF;" text="Home" textFill="WHITE">
+
+                    <font>
+                        <Font name="Arial Black" size="11.0" />
+                    </font></Button>
+                <Button fx:id="btnProfile" layoutX="857.0" layoutY="18.0" mnemonicParsing="false" onAction="#goProfile" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #5462ff; -fx-text-fill: #FFFFFF;" text="Profil" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="11.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+        <Pane fx:id="pnItems" layoutX="6.0" layoutY="75.0" prefHeight="552.0" prefWidth="1120.0" />
+
+                    <Pane layoutX="-6.0" layoutY="62.0" prefHeight="698.0" prefWidth="1135.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-60.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="62.0">
+            <children>
+
+                            <Label layoutX="72.0" layoutY="128.0" style="-fx-font-size: 20px; -fx-font-family: 'Arial'; -fx-font-weight: bold; -fx-text-fill: #301bef; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.0, 0, 1);" text="Declare Your Sinister Vehicle">
+                    <font>
+                        <Font name="Franklin Gothic Medium Cond" size="12.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="364.0" fitWidth="277.0" layoutX="59.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../veh.PNG" />
+                    </image>
+                </ImageView>
+                <Pane layoutX="415.0" layoutY="25.0" prefHeight="577.0" prefWidth="508.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+                    <children>
+                        <TabPane fx:id="tabPane" prefHeight="558.0" prefWidth="508.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Location and Date">
+                                    <content>
+                                        <VBox alignment="CENTER" prefHeight="770.0" prefWidth="508.0" spacing="10">
+                                            <Label text="Location" />
+                                            <TextField fx:id="LocationTF" layoutX="34.0" layoutY="166.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" styleClass="text-field-style">
+                                                <padding>
+                                                    <Insets top="10.0" />
+                                                </padding>
+                                                <VBox.margin>
+                                                    <Insets />
+                                                </VBox.margin>
+                                 </TextField>
+                                            <Label text="Date of Sinister" />
+                                            <DatePicker fx:id="Date_of_sinisterPicker" prefWidth="200.0" />
+                                            <Label text="Nom Conducteur A" />
+                                            <TextField fx:id="Nom_conducteur_aTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                            <Label text="Nom Conducteur B" />
+                                            <TextField fx:id="Nom_conducteur_bTF" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" />
+                                            <Label text="Prenom Conducteur A" />
+                                            <TextField fx:id="Prenom_conducteur_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                            <Label text="Prenom Conducteur B" />
+                                            <TextField fx:id="Prenom_conducteur_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                            <Label text="Adresse Conducteur A" />
+                                            <TextField fx:id="Adresse_conducteur_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                            <Label text="Adresse Conducteur B" />
+                                            <TextField fx:id="Adresse_conducteur_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                            <Button fx:id="uploadImageButton" onAction="#uploadImage" text="Upload Image" />
+                                            <ImageView fx:id="sinisterImageView" fitHeight="200.0" fitWidth="200.0" />
+
+                                                    </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab text="Vehicle Information">
+                                    <content>
+                                        <ScrollPane fitToWidth="true" prefHeight="600.0" prefWidth="568.0">
+                                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #fff;">
+                                                <Label text="Num Permis A" />
+                                                <TextField fx:id="Num_permis_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Num Permis B" />
+                                                <TextField fx:id="Num_permis_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Delivre A" />
+                                                <DatePicker fx:id="Delivre_aPicker" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Delivre B" />
+                                                <DatePicker fx:id="Delivre_bPicker" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Num Contrat A" />
+                                                <TextField fx:id="Num_contrat_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Num Contrat B" />
+                                                <TextField fx:id="Num_contrat_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Marque Vehicule A" />
+                                                <TextField fx:id="Marque_vehicule_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Marque Vehicule B" />
+                                                <TextField fx:id="Marque_vehicule_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Immatriculation A" />
+                                                <TextField fx:id="Immatriculation_aTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Immatriculation B" />
+                                                <TextField fx:id="Immatriculation_bTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Bvehicule Assure Par" />
+                                                <TextField fx:id="Bvehicule_assure_parTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <Label text="Agence" />
+                                                <TextField fx:id="AgenceTF" maxWidth="-Infinity" prefWidth="200.0" />
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="500.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#addSinisterVehicle" prefHeight="28.0" prefWidth="97.0" styleClass="custom-button" text="Add" textFill="#3336FF" />
+                                                    </children>
+                                                </HBox>
+                                            </VBox>
+                                        </ScrollPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </Pane>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
+
+    </children>
+</AnchorPane>

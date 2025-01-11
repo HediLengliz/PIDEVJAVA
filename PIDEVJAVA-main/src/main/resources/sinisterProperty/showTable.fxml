@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@style2.css"
+            fx:controller="org.example.controllers.sinisterProperty.ShowTable"
+            prefHeight="400.0" prefWidth="600.0">
+    <ScrollPane  layoutX="321.0" layoutY="143.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css" >
+
+        <content>
+
+            <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #FFFFFF;">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+            </VBox>
+        </content>
+    </ScrollPane>
+
+    <Pane fx:id="" prefHeight="576.0" prefWidth="198.0" style="-fx-background-color: #5462ff;">
+        <children>
+            <Label fx:id="username" layoutX="32.0" layoutY="22.0" text="Oussema Ayari" textFill="WHITE">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="16.0" />
+                </font>
+            </Label>
+            <ImageView fx:id="profilePicImageView" fitHeight="103.0" fitWidth="111.0" layoutX="34.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+            <Button fx:id="btnListPropertyRequest" layoutX="-9.0" layoutY="147.0" mnemonicParsing="false" onAction="#listPropertyRequest" prefHeight="25.0" prefWidth="198.0" text="Liste demande habitat" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnListVehicleRequest" layoutX="-10.0" layoutY="176.0" mnemonicParsing="false" onAction="#listVehicleRequest" prefHeight="25.0" prefWidth="198.0" text="Liste demande vehicule">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnListLifeRequest" layoutX="-9.0" layoutY="208.0" mnemonicParsing="false" onAction="#listLifeRequest" prefHeight="25.0" prefWidth="198.0" text="Liste demande maladie">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnListUserReclamations" layoutY="236.0" mnemonicParsing="false" onAction="#listUserReclamations" prefHeight="25.0" prefWidth="190.0" text="Personal reclamations">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnUserInformations" layoutX="-1.0" layoutY="264.0" mnemonicParsing="false" onAction="#userInformations" prefHeight="25.0" prefWidth="192.0" text="Gérer votre profil">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="408.0" mnemonicParsing="false" onAction="#goToChangePassword" prefHeight="25.0" prefWidth="192.0" text="Settings">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="430.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="192.0" text="Logout">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="380.0" mnemonicParsing="false" onAction="#listSinistreHabitat" prefHeight="25.0" prefWidth="192.0" text="Liste sinistre habitat">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="349.0" mnemonicParsing="false" onAction="#listSinistreVehicule" prefHeight="25.0" prefWidth="192.0" text="Liste sinistre vehicule">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="322.0" mnemonicParsing="false" onAction="#listSinistreMaladie" prefHeight="25.0" prefWidth="192.0" text="Liste sinistre vie">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="294.0" mnemonicParsing="false" onAction="#listDevis" prefHeight="25.0" prefWidth="192.0" text="Liste devis">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+
+
+
+
+
+
+
+
+
+
+        </children>
+    </Pane>
+</AnchorPane>

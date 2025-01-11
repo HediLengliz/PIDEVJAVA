@@ -1,0 +1,55 @@
+/* newQuestionStyle.css */
+
+/* AnchorPane */
+.root {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px; /* Font size */
+    -fx-text-fill: #333333; /* Dark gray text color */
+}
+
+/* TextFields */
+.text-field {
+    -fx-font-size: 14px; /* Font size */
+    -fx-pref-height: 30px; /* Height */
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-weight: bold; /* Bold font */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* Error Text */
+#error {
+    -fx-font-size: 12px; /* Font size */
+}
+
+#errorLabel {
+    -fx-font-size: 12px; /* Font size */
+    -fx-text-fill: red; /* Red text color */
+}
+
+.choice-box {
+    -fx-font-size: 14px; /* Font size */
+    -fx-pref-height: 30px; /* Height */
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+}
+
+/* ChoiceBox items */
+.choice-box .list-view {
+    -fx-pref-width: 180px; /* Adjust the width as per your preference */
+}

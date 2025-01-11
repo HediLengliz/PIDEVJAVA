@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.ContratVie.update_ContratVie">
+    <children>
+        <VBox layoutX="197.0" layoutY="60.0" spacing="10">
+            <Label text="Update Contrat vie" textFill="#5462ff">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font></Label>
+            <DatePicker fx:id="dateDebut" promptText="Date debut" />
+            <DatePicker fx:id="dateFin" promptText="Date fin" />
+            <TextField fx:id="description" promptText="Description" />
+            <TextField fx:id="prix" promptText="Prix" />
+            <TextField fx:id="matriculeAgent" promptText="Matricule Agent" />
+
+
+
+        </VBox>
+        <Button layoutX="319.0" layoutY="317.0" onAction="#updateContratVie" style="-fx-background-color: #5462ff;" text="Update" textFill="WHITE" />
+
+    </children>
+</AnchorPane>

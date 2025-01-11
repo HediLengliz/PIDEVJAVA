@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="1134.0" spacing="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <Label fx:id="date_sinister" prefHeight="18.0" prefWidth="115.0" text="Date Sinister" textFill="#101010" />
+        <Label fx:id="description" prefHeight="18.0" prefWidth="90.0" text="Description" textFill="#101010" />
+        <Label fx:id="status_sinister" prefHeight="18.0" prefWidth="114.0" text="Status Sinister" textFill="#101010" />
+        <Label fx:id="amount_sinister" prefHeight="18.0" prefWidth="122.0" text="Amount Sinister" textFill="#101010" />
+        <Label fx:id="beneficiary_name" prefHeight="18.0" prefWidth="121.0" text="Beneficiary Name" textFill="#101010" />
+        <Label fx:id="location" prefHeight="18.0" prefWidth="95.0" text="Location" textFill="#101010">
+
+
+
+
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+
+
+
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Admin">
+   <children>
+      <SplitPane dividerPositions="0.4999999999999999" layoutX="-2.0" layoutY="65.0" prefHeight="341.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="297.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="14.0" text="Demandes assurances " textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="61.0" layoutY="94.0" mnemonicParsing="false" onAction="#showLifeRequest" prefHeight="38.0" prefWidth="174.0" text="Demandes assurance vie" />
+                  <Button layoutX="61.0" layoutY="148.0" mnemonicParsing="false" onAction="#showPropertyRequest" prefHeight="38.0" prefWidth="174.0" text="Demandes assurance habitat" />
+                  <Button layoutX="61.0" layoutY="204.0" mnemonicParsing="false"  onAction="#showVehicleRequest" prefHeight="38.0" prefWidth="174.0" text="Demandes assurance vehicule" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="65.0" layoutY="14.0" text="Contrat assurances " textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="61.0" layoutY="198.0" mnemonicParsing="false" onAction="#showContratVehicule" prefHeight="38.0" prefWidth="174.0" text="Contrat assurance vehicule" />
+                  <Button layoutX="61.0" layoutY="94.0" mnemonicParsing="false" onAction="#showContratVie" prefHeight="38.0" prefWidth="174.0" text="Contrat assurance vie" />
+                  <Button layoutX="61.0" layoutY="146.0" mnemonicParsing="false" onAction="#showContratHabitat" prefHeight="38.0" prefWidth="174.0" text="Contrat assurance habitat" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="38.0" prefWidth="140.0" text="Partie Admin" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

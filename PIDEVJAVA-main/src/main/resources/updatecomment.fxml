@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.updatecomment">
+   <children>
+      <Pane prefHeight="82.0" prefWidth="686.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Comment">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="264.0" layoutY="92.0" prefHeight="18.0" prefWidth="112.0" text="Comment">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="226.0" text="Rating">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" layoutX="108.0" layoutY="131.0" prefHeight="82.0" prefWidth="424.0" promptText="write a comment..." />
+      <Rating fx:id="Rate" layoutX="232.0" layoutY="276.0">
+         <effect>
+            <Blend mode="EXCLUSION" />
+         </effect>
+      </Rating>
+      <Button fx:id="updateButton" layoutX="240.0" layoutY="337.0" mnemonicParsing="false" onAction="#updateComment" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: darkblue;" text="update" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

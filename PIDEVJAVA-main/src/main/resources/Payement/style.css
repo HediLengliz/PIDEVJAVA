@@ -1,0 +1,53 @@
+/* Root VBox */
+VBox {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 20px;
+}
+
+/* Payment Details VBox */
+VBox > VBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0, 0, 1 );
+}
+
+/* Order Summary VBox */
+VBox > VBox:nth-of-type(2) {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0, 0, 1 );
+}
+
+/* Button */
+Button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14pt;
+    -fx-border-radius: 5px;
+}
+
+/* Button hover */
+Button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Text fields */
+TextField {
+    -fx-padding: 5px;
+    -fx-border-radius: 3px;
+    -fx-border-color: #cccccc;
+    -fx-background-radius: 3px;
+}
+
+/* Labels */
+Label {
+    -fx-font-size: 12pt;
+}

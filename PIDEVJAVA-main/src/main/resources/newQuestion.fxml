@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.NewQuestion">
+   <children>
+      <Label layoutX="230.0" layoutY="26.0" text="New question" textFill="#1976d2">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font></Label>
+      <TextField fx:id="question" layoutX="215.0" layoutY="229.0" onKeyTyped="#handleQuestionInput" />
+      <TextField fx:id="priority" layoutX="215.0" layoutY="325.0" onKeyTyped="#handlePriorityInput" />
+      <Button fx:id="btnCreate" layoutX="478.0" layoutY="365.0" mnemonicParsing="false" onAction="#addQuestion" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 20px;" text="save" />
+
+      <Text fx:id="error" fill="#fa3939" layoutX="215" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="132.0" layoutY="235.0" text="Question :" />
+      <Label layoutX="134.0" layoutY="282.0" text="Type :" />
+      <Label layoutX="134.0" layoutY="329.0" text="Priortiy :" />
+      <Label fx:id="errorLabel" layoutX="215.0" layoutY="99.0" textFill="red" />
+
+      <ChoiceBox fx:id="type" layoutX="215.0" layoutY="276.0" prefHeight="24.0" prefWidth="171.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="life" />
+               <String fx:value="property" />
+               <String fx:value="vehicle" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="206.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/question.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@styles/newQuestionStyle.css" />
+   </stylesheets>
+</AnchorPane>

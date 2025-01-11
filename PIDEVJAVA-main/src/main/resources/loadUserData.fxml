@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.UserListController" prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="tableViewUsers" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <columns>
+            <TableColumn fx:id="columnFirstName" text="First Name" />
+            <TableColumn fx:id="columnLastName" text="Last Name" />
+            <TableColumn fx:id="columnEmail" text="Email" />
+        </columns>
+    </TableView>
+</AnchorPane>

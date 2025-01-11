@@ -1,0 +1,143 @@
+.root {
+    -fx-background-color: #F5F6FA;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 12px;
+}
+
+.combo-box {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0, 0, 1, 0;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-insets: 0, 0, 1, 0;
+    -fx-border-color: #BDBDBD;
+}
+
+.text-field {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0, 0, 1, 0;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-insets: 0, 0, 1, 0;
+    -fx-border-color: #BDBDBD;
+}
+
+.button {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+/* Specific button styles for different actions */
+.delete-button, .clear-button, .update-button, .validate-button, .decline-button {
+    -fx-font-size: 12px; /* Adjusting the font size for better readability */
+    -fx-padding: 6px 12px; /* Adjusting padding for a snug fit */
+}
+
+.delete-button {
+    -fx-background-color: #D32F2F;
+}
+
+.delete-button:hover {
+    -fx-background-color: #C62828;
+}
+
+.clear-button {
+    -fx-background-color: #1976D2; /* Changing to blue */
+}
+
+.clear-button:hover {
+    -fx-background-color: #1565C0; /* A slightly darker blue for hover effect */
+}
+
+.validate-button, .update-button {
+    -fx-background-color: #4CAF50; /* A soothing green */
+}
+
+.validate-button:hover, .update-button:hover {
+    -fx-background-color: #388E3C; /* Darker green on hover */
+}
+
+.decline-button {
+    -fx-background-color: #FFEB3B; /* Changing to yellow for decline */
+}
+
+.decline-button:hover {
+    -fx-background-color: #FDD835; /* A darker yellow on hover */
+}
+
+.title-label {
+    -fx-font-size: 30px;  /* Increased font size */
+    -fx-font-family: "Arial"; /* Specifying the font family */
+    -fx-font-weight: bold; /* Making the font bold */
+    -fx-text-fill: #301bef; /* Ensuring the color is the specified blue */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.0, 0, 1); /* Optional: Adding a subtle shadow for depth */
+}
+
+.vbox {
+    -fx-spacing: 10px; /* Ensuring there's a nice space between form elements */
+}
+
+/* Styles for the ComboBox */
+.combo-box .list-cell {
+    -fx-padding: 4px 10px;
+}
+.combo-box:focused {
+    -fx-border-color: #0099FF;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+}
+
+.save-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+.text-field, .date-picker, .combo-box, .button {
+    -fx-margin: 5px;
+}
+
+.text-field:hover, .combo-box:hover {
+    -fx-border-color: #a2a2a2;
+}
+
+.text-field:focused, .date-picker:focused, .combo-box:focused {
+    -fx-border-color: #0099FF;
+}
+.button:disabled {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #666666;
+}
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;  /* Larger font size for better readability */
+    -fx-font-family: "Arial"; /* Cleaner, more professional font */
+    -fx-padding: 5px;  /* Adds spacing around the text */
+    -fx-font-weight: bold; /* Makes the text bold */
+}
+
+
+.text-field.error, .date-picker.error, .combo-box.error {
+    -fx-border-color: red; /* Red border to indicate error */
+}
+

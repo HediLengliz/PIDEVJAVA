@@ -1,0 +1,49 @@
+/* Stylesheet.css */
+.header {
+    -fx-padding: 10px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for ComboBox */
+.combo-box {
+    -fx-font-size: 14px;
+}
+
+/* Styling for TableView */
+.table-view {
+    -fx-background-color: #ffffff;
+}
+
+/* Styling for TableView columns */
+.table-column {
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Styling for TableView rows */
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+/* Styling for Pagination buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}

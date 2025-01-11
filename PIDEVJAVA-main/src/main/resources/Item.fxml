@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="1134.0" spacing="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <Label fx:id="id" prefHeight="18.0" prefWidth="18.0" text="ID" textFill="#101010" />
+        <Label fx:id="date_prescription" prefHeight="18.0" prefWidth="115.0" text="Date Prescription" textFill="#101010" />
+        <Label fx:id="medications" prefHeight="18.0" prefWidth="90.0" text="Medications" textFill="#101010" />
+        <Label fx:id="status_prescription" prefHeight="18.0" prefWidth="114.0" text="Status Prescription" textFill="#101010" />
+        <Label fx:id="additional_notes" prefHeight="18.0" prefWidth="122.0" text="Additional Notes" textFill="#101010" />
+        <Label fx:id="validity_duration" prefHeight="18.0" prefWidth="121.0" text="Validity Duration" textFill="#101010" />
+        <Label fx:id="user_cin_id" prefHeight="18.0" prefWidth="95.0" text="User ID" textFill="#101010">
+
+
+
+
+        <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+
+
+
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

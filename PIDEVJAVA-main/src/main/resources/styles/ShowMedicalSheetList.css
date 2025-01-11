@@ -1,0 +1,95 @@
+.root {
+    -fx-background-color: #F5F6FA;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.label{
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c387e;
+    -fx-font-size: 12px;
+}
+
+.table-view {
+    -fx-base: #FFFFFF;
+    -fx-control-inner-background: #FFFFFF;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.text-field {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0, 0, 1, 0;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-insets: 0, 0, 1, 0;
+    -fx-border-color: #BDBDBD;
+}
+
+.button {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.delete-button {
+    -fx-background-color: #D32F2F;
+}
+
+.delete-button:hover {
+    -fx-background-color: #C62828;
+}
+
+.clear-button {
+    -fx-background-color: #1976D2; /* Blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.clear-button:hover {
+    -fx-background-color: #1565C0; /* Darker Blue on hover */
+}
+
+
+
+.title-label {
+    -fx-alignment: center;
+    -fx-font-size: 30px;  /* Increased font size */
+    -fx-font-family: "Arial"; /* Specifying the font family */
+    -fx-font-weight: bold; /* Making the font bold */
+    -fx-text-fill: #301bef; /* Ensuring the color is the specified blue */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.0, 0, 1); /* Optional: Adding a subtle shadow for depth */
+}
+
+.button-box {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+/* GridPane styles */
+.grid-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+.update-button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.update-button:hover {
+    -fx-background-color: #388E3C; /* Darker green on hover */
+}

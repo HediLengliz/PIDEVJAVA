@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="446.0" prefWidth="1024.0" stylesheets="@style.css"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.PropertyRequest.get_deletePropertyRequest">
+    <children>
+        <TableView fx:id="propertyRequestTable"  layoutX="8.0" layoutY="51.0" prefHeight="286.0" prefWidth="1006.0">
+            <columns>
+                <TableColumn fx:id="idLPropertyRequest" prefWidth="100.79998779296875" text="Id" />
+                <TableColumn fx:id="dateColumn" prefWidth="121.60003662109375" text="Date" />
+                <TableColumn fx:id="statusColum" prefWidth="114.39996337890625" text="Status" />
+                <TableColumn fx:id="propertyFormColumn" prefWidth="114.39996337890625" text="Type" />
+                <TableColumn fx:id="numberRoomsColumn" prefWidth="114.39996337890625" text="Nb piéce" />
+                <TableColumn fx:id="propertyValueColumn" prefWidth="114.39996337890625" text="Valeur" />
+                <TableColumn fx:id="addressColumn" prefWidth="114.39996337890625" text="adresse" />
+                <TableColumn fx:id="surfaceColumn" prefWidth="111.20001220703125" text="surface" />
+                <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="98.40006103515623" style="-fx-alignment: center;" text="Action" />
+
+            </columns>
+        </TableView>
+        <TextField fx:id="keywordTextField" layoutX="794.0" layoutY="14.0" onKeyTyped="#addEmployeeSearch" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #FFFFFF; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.PropertyRequest.update_PropertyRequest">
+    <children>
+        <VBox layoutX="50.0" layoutY="50.0" spacing="10">
+            <Label text="Update Property Request" />
+            <TextField fx:id="numberRooms" promptText="Nombre des piéces" />
+            <TextField fx:id="propertyForm" promptText="Type de l'habitat" />
+            <TextField fx:id="propertyValue" promptText="Valeur" />
+            <TextField fx:id="surface" promptText="Surface" />
+            <TextField fx:id="address" promptText="Adresse" />
+
+            <HBox spacing="10">
+                <Button text="Update" onAction="#updatePropertyRequest" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="423.0" prefWidth="564.0" stylesheets="@styles/ShowSinisterLifeDetails.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.ShowSinisterLifeDetailsController">
+    <VBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="30.0" spacing="15">
+        <Label styleClass="header-label" text="Sinister Life Details:" />
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Description: " />
+            <Label fx:id="labelDescription" styleClass="detail-label" />
+        </HBox>
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Location: " />
+            <Label fx:id="labelLocation" styleClass="detail-label" />
+        </HBox>
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Amount Sinister: " />
+            <Label fx:id="labelAmountSinister" styleClass="detail-label" />
+        </HBox>
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Status Sinister: " textFill="#194ecf" />
+            <Label fx:id="labelStatusSinister" styleClass="detail-label" />
+        </HBox>
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Date Sinister: " />
+            <Label fx:id="labelDateSinister" styleClass="detail-label" />
+        </HBox>
+
+        <HBox spacing="5">
+            <Label styleClass="detail-label" text="Beneficiary Name: " />
+            <Label fx:id="labelBeneficiaryName" styleClass="detail-label" />
+        </HBox>
+    </VBox>
+</AnchorPane>

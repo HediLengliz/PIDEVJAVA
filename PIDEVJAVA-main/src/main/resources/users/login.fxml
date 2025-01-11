@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.User.LoginController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane prefHeight="450.0" prefWidth="300.0" styleClass="left-form" stylesheets="@../loginDesign.css">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="92.0" layoutY="210.0" size="8em" />
+                        <Label layoutX="29.0" layoutY="266.0" text="Protechtini Management System" textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma" size="17.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="right_form" layoutX="300.0" prefHeight="450.0" prefWidth="345.0" styleClass="right-form" stylesheets="@../loginDesign.css" >
+                    <children>
+                        <Label layoutX="36.0" layoutY="63.0" text="Welcome back !">
+                            <font>
+                                <Font name="Tahoma Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emailField" layoutX="34.0" layoutY="118.0" prefHeight="30.0" prefWidth="220.0" promptText="Email" styleClass="textfield" stylesheets="@../loginDesign.css" />
+                        <Label fx:id="emailErrorLabel" layoutX="28.0" layoutY="156.0" prefHeight="22.0" prefWidth="226.0" textFill="red" /> <!-- Error label for email -->
+                        <PasswordField fx:id="passwordField" layoutX="34.0" layoutY="192.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@../loginDesign.css" />
+                        <Label fx:id="passwordErrorLabel" layoutX="30.0" layoutY="231.0" prefHeight="18.0" prefWidth="220.0" textFill="red" /> <!-- Error label for password -->
+                        <Button fx:id="loginBtn" layoutX="45.0" layoutY="308.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="226.0" styleClass="lg" stylesheets="@../loginDesign.css" text="Login" />
+                        <Button fx:id="close" layoutX="248.0" layoutY="14.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="58.0" styleClass="close" stylesheets="@../loginDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                        <!-- Error message label for SQL related errors -->
+                        <Label fx:id="sqlerror" layoutX="45.0" layoutY="280.0" prefHeight="18.0" prefWidth="210.0" textFill="red" />
+                        <Button layoutX="48.0" layoutY="370.0" mnemonicParsing="false" onAction="#registerForm" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@../loginDesign.css" text="Register" />
+                  <Button layoutX="193.0" layoutY="246.0" onAction="#goToForgetPassword" styleClass="close" text="Forget password ?">
+                        <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="forgetEmail_form" layoutX="300.0" prefHeight="450.0" prefWidth="346.0" styleClass="right-form" stylesheets="@../loginDesign.css" visible="false">
+                    <children>
+                        <Label fx:id="forgetPasswordLabel" layoutX="28.0" layoutY="94.0" text="Forget your password ?">
+                            <font>
+                                <Font name="Tahoma Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emailForget" layoutX="35.0" layoutY="178.0" prefHeight="30.0" prefWidth="220.0" promptText="Email" styleClass="textfield" stylesheets="@../loginDesign.css" />
+                        <Label fx:id="emailErrorforget" layoutX="28.0" layoutY="156.0" prefHeight="22.0" prefWidth="172.0" textFill="red" />
+                        <!-- Error message label for SQL related errors -->
+                        <Label layoutX="138.0" layoutY="260.0" textFill="red" />
+                        <Button layoutX="42.0" layoutY="249.0" mnemonicParsing="false" onAction="#previous" prefHeight="40.0" prefWidth="103.0" styleClass="close" stylesheets="@../loginDesign.css" text="Back" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label layoutX="33.0" layoutY="127.0" prefHeight="40.0" prefWidth="274.0" text="we will send you a link to reset your password." />
+                  <Button layoutX="171.0" layoutY="249.0" mnemonicParsing="false" onAction="#forgetPassword" prefHeight="40.0" prefWidth="103.0" styleClass="login-btn" text="Send" />
+                  <Label fx:id="forgetEmailErrorLabel" layoutX="35.0" layoutY="217.0" prefHeight="18.0" prefWidth="220.0" textFill="#ff0606" />
+
+                    </children>
+                </AnchorPane>
+
+
+                <AnchorPane fx:id="doubleAuthPane" layoutX="300.0" prefHeight="450.0" prefWidth="346.0" styleClass="right-form" stylesheets="@../loginDesign.css">
+                    <children>
+                        <Label fx:id="labelresend1" layoutX="42.0" layoutY="97.0" text="Enter your code">
+                            <font>
+                                <Font name="Tahoma Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="verificationCodeField" layoutX="35.0" layoutY="178.0" prefHeight="30.0" prefWidth="220.0" promptText="Verification code" styleClass="textfield" stylesheets="@../loginDesign.css" />
+                        <Label fx:id="smsError" layoutX="42.0" layoutY="223.0" prefHeight="22.0" prefWidth="172.0" textFill="red" />
+                        <Button fx:id="btnBack" layoutX="42.0" layoutY="249.0" mnemonicParsing="false" onAction="#previous" prefHeight="40.0" prefWidth="103.0" styleClass="close" stylesheets="@../loginDesign.css" text="Back" textAlignment="JUSTIFY">
+                            <font>
+                                <Font size="14.0" />
+                            </font></Button>
+                        <Label fx:id="labelresend2" layoutX="42.0" layoutY="127.0" prefHeight="40.0" prefWidth="290.0" text="we sent you a verification code on +21692741748." />
+                        <Button fx:id="btnsendverifcode" layoutX="171.0" layoutY="249.0" mnemonicParsing="false" onAction="#afterDoubleAuth" prefHeight="40.0" prefWidth="103.0" styleClass="login-btn" text="Send" />
+                  <Label fx:id="labelresend3" layoutX="28.0" layoutY="305.0" prefHeight="18.0" prefWidth="122.0" text="Didn't get the code ?" />
+                  <Label fx:id="btnresend" layoutX="173.0" layoutY="306.0" onMouseClicked="#sendSms" prefHeight="18.0" prefWidth="66.0" text="Resend" textFill="#3c667e" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+
+                    </children>
+                </AnchorPane>
+
+
+
+
+
+
+
+            </children>
+        </AnchorPane>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <AnchorPane fx:id="register_form" layoutX="300.0" prefHeight="426.0" prefWidth="634.0" styleClass="right-form" stylesheets="@../loginDesign.css" visible="false">
+            <children>
+
+                            <Label fx:id="firstNameLabel" layoutX="39.0" layoutY="81.0" text="First Name:" textFill="#7f7ac4" />
+                <TextField fx:id="firstNameField" layoutX="37.0" layoutY="103.0" prefHeight="26.0" prefWidth="122.0" promptText="First Name" />
+                <Label fx:id="firstNameLabelfield" layoutX="37.0" layoutY="132.0" prefHeight="18.0" prefWidth="150.0" textFill="#ff1c1c" />
+
+                            <Label fx:id="cinLabel" layoutX="38.0" layoutY="155.0" text="CIN:" textFill="#7f7ac4" />
+                <TextField fx:id="cinField" layoutX="37.0" layoutY="179.0" prefHeight="26.0" prefWidth="122.0" promptText="CIN" />
+                <Label fx:id="cinLabelField" layoutX="38.0" layoutY="208.0" prefHeight="18.0" prefWidth="150.0" textFill="#ff1c1c" />
+
+            
+                            <Label fx:id="lastNameLabel" layoutX="39.0" layoutY="230.0" text="Last Name:" textFill="#7f7ac4" />
+                <TextField fx:id="lastNameField" layoutX="39.0" layoutY="258.0" prefHeight="26.0" prefWidth="122.0" promptText="Last Name" />
+                <Label fx:id="lastNameLabelfield" layoutX="39.0" layoutY="289.0" prefHeight="18.0" prefWidth="150.0" textFill="#ff1c1c" />
+
+                            <Label fx:id="emailLabel" layoutX="195.0" layoutY="80.0" text="Email:" textAlignment="CENTER" textFill="#7f7ac4">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+                <TextField fx:id="emailF" layoutX="192.0" layoutY="103.0" prefHeight="26.0" prefWidth="122.0" promptText="Email" />
+                <Label fx:id="emailLabelField" layoutX="192.0" layoutY="131.0" prefHeight="18.0" prefWidth="143.0" textFill="#ff1c1c" />
+
+            
+                            <Label fx:id="addressLabel" layoutX="39.0" layoutY="304.0" text="Address:" textFill="#7f7ac4" />
+                <TextField fx:id="addressField" layoutX="39.0" layoutY="327.0" prefHeight="26.0" prefWidth="122.0" promptText="Address" />
+                <Label fx:id="addresssLabelField" layoutX="44.0" layoutY="357.0" prefHeight="18.0" prefWidth="143.0" textFill="#ff1c1c" />
+
+                            <Label fx:id="passwordLabel" layoutX="189.0" layoutY="230.0" text="Password:" textFill="#7f7ac4" />
+                <PasswordField fx:id="passwordF" layoutX="187.0" layoutY="258.0" prefHeight="26.0" prefWidth="122.0" promptText="Password" />
+                <Label fx:id="passwordLabelfield" layoutX="187.0" layoutY="289.0" prefHeight="18.0" prefWidth="158.0" textFill="#ff1c1c" />
+
+                            <Label fx:id="phoneNumberLabel" layoutX="192.0" layoutY="156.0" text="Phone Number:" textFill="#7f7ac4" />
+                <TextField fx:id="phoneNumber" layoutX="189.0" layoutY="178.0" prefHeight="26.0" prefWidth="122.0" promptText="phone Number" />
+                <Label fx:id="phoneNumberLabelfield" layoutX="188.0" layoutY="207.0" prefHeight="18.0" prefWidth="150.0" textFill="#ff1c1c" />
+                <StackPane fx:id="captchaPane" layoutX="357.0" layoutY="311.0" prefHeight="30.0" prefWidth="150.0" />
+                <TextField fx:id="captchaTextField" layoutX="184.0" layoutY="361.0" prefHeight="30.0" prefWidth="122.0" promptText="Enter CAPTCHA" />
+                <Button fx:id="submitButton" layoutX="215.0" layoutY="407.0" mnemonicParsing="false" onAction="#submit" prefHeight="30.0" prefWidth="77.0" styleClass="login-btn" text="Register" textFill="#626e6a">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="previousButton" layoutX="42.0" layoutY="410.0" mnemonicParsing="false" onAction="#previous" prefHeight="27.0" prefWidth="60.0" text="Login" textFill="#626e6a">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            <Text fill="#153291" fontSmoothingType="LCD" layoutX="126.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP !" wrappingWidth="102.85713958740234">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+                  <Pane layoutX="184.0" layoutY="321.0" prefHeight="30.0" prefWidth="143.0" style="-fx-background-color: #cecece; -fx-background-radius: 1;">
+               <children>
+                        <Label fx:id="captchaText" alignment="TOP_CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="30.0" prefWidth="143.0" text="CAPTCHA: ">
+                     <font>
+                        <Font name="Kristen ITC" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="343.0" layoutY="-3.0" prefHeight="455.0" prefWidth="266.0" style="-fx-background-color: linear-gradient(to bottom, #301bef, #3c78fc);">
+               <children>
+                  <ImageView fitHeight="191.0" fitWidth="220.0" layoutX="31.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/userAdd.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="62.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Now" wrappingWidth="143.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+
+    </children>
+</StackPane>

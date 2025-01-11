@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" stylesheets="@tableau.css" prefWidth="1100" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.GetQuoteController">
+
+    <children>
+        <TableView fx:id="QuoteTable" layoutX="50" layoutY="50" prefHeight="300" prefWidth="1000">
+            <columns>
+                <TableColumn prefWidth="50" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="400" text="type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="150" text="amount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="amount" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn prefWidth="150" text="services">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="services" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="100" text="Action" fx:id="actionColumn" />
+            </columns>
+        </TableView>
+        <Button text="Add New Quote" layoutX="50" layoutY="360" onAction="#addQuote" />
+    </children>
+
+</AnchorPane>

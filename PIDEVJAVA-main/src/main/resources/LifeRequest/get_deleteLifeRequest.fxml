@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="419.0" prefWidth="1116.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.LifeRequest.get_deleteLifeRequest">
+    <children>
+        <VBox layoutX="20.0" layoutY="10.0" spacing="10">
+            <HBox spacing="10">
+                <Label styleClass="sort-label" text="Sort by:" />
+                <ComboBox fx:id="sortComboBox" onAction="#onSortOptionSelected" styleClass="sort-combobox">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="None" />
+                            <String fx:value="en_cours" />
+                            <String fx:value="Accepter" />
+                            <String fx:value="Refuser" />
+
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+        </VBox>
+        <TableView fx:id="LifeRequestTable" layoutX="-1.0" layoutY="73.0" prefHeight="346.0" prefWidth="1105.0">
+            <columns>
+                <TableColumn fx:id="idLifeRequest" prefWidth="100.79998779296875"  text="Id" />
+                <TableColumn fx:id="dateColumn" prefWidth="121.60003662109375"  text="Date" />
+                <TableColumn fx:id="statusColum" prefWidth="114.39996337890625" text="Status" />
+                <TableColumn fx:id="ageColumn" prefWidth="114.39996337890625" text="Age" />
+                <TableColumn fx:id="chronicDiseaseColumn" prefWidth="114.39996337890625" text="Maladie" />
+                <TableColumn fx:id="chronicDiseaseDescriptionColumn" prefWidth="114.39996337890625" text="Details maladie" />
+                <TableColumn fx:id="surgeryColumn" prefWidth="114.39996337890625" text="Operation" />
+                <TableColumn fx:id="occupationColumn" prefWidth="114.39996337890625"  text="Profession" />
+                <TableColumn fx:id="civilStatusColumn" prefWidth="114.39996337890625" text="Etat civil" />
+                <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="79.20001220703125" style="-fx-alignment: center;" text="Action" />
+
+
+
+            </columns>
+        </TableView>
+
+        <TextField fx:id="keywordTextField" layoutX="794.0" layoutY="14.0" onKeyTyped="#addEmployeeSearch" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #FFFFFF; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+
+
+    </children>
+</AnchorPane>

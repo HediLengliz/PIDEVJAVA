@@ -1,0 +1,66 @@
+
+.btn:hover{
+    -fx-cursor:hand ;
+}
+.table-view {
+    -fx-background-color:#651FFF;
+    -fx-background-radius:14 14 0 0;
+
+}
+.table-view .column-header-background{
+    -fx-background-color: #651FFF;
+    -fx-background-radius:14;
+    -fx-background-insets: 0 0 10 0;
+
+
+
+}
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white ;
+}
+
+.sort-combobox {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 4px;
+}
+
+/* ComboBox arrow button styling */
+.sort-combobox .arrow-button {
+    -fx-background-color: #ddd;
+}
+
+/* ComboBox list cell styling */
+.sort-combobox .list-cell {
+    -fx-padding: 4px 10px;
+    -fx-text-fill: #333;
+}
+
+.sort-combobox:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Ensure ComboBox dropdown list matches style */
+.sort-combobox .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+}
+
+.sort-combobox .list-view .list-cell:filled:selected, .sort-combobox .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333;
+}
+
+.sort-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c387e;
+    -fx-font-size: 14px;
+}

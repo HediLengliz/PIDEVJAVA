@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1239.0" stylesheets="@styles/ShowSinisterLifeList.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.SinisterLifeListController">
+    <VBox layoutX="20.0" layoutY="10.0" spacing="10">
+        <HBox spacing="10">
+            <Label styleClass="sort-label" text="Sort by:" />
+            <ComboBox fx:id="sortComboBox" onAction="#onSortOptionSelected" styleClass="sort-combobox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="None" />
+                        <String fx:value="Least Amount" />
+                        <String fx:value="Highest Amount" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+    </VBox>
+    <TableView fx:id="tableViewSinisterLives" layoutX="270.0" layoutY="56.0" prefHeight="300.0" prefWidth="700.0">
+        <columns>
+            <TableColumn fx:id="columnId" prefWidth="59.19998550415039" text="ID" />
+            <TableColumn fx:id="columnDateSinister" prefWidth="91.199951171875" text="Date" />
+            <TableColumn fx:id="columnDescription" prefWidth="90.40000915527344" text="Description" />
+            <TableColumn fx:id="columnLocation" text="Location" />
+            <TableColumn fx:id="columnAmountSinister" text="Amount" />
+            <TableColumn fx:id="columnStatusSinister" text="Status" />
+            <TableColumn fx:id="columnBeneficiaryName" prefWidth="130.4000244140625" text="Beneficiary Name" />
+            <TableColumn fx:id="columnSinisterUserId" prefWidth="109.5999755859375" text="User ID" />
+        </columns>
+    </TableView>
+
+    <VBox layoutX="20.0" layoutY="362.0" spacing="10">
+        <Label text="Details" />
+        <GridPane hgap="10" vgap="10">
+            <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="textFieldDateSinister" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+   
+            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldDescription" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+            <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldLocation" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+            <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="textFieldAmountSinister" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+            <Label text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="textFieldStatusSinister" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+            <Label text="Beneficiary Name:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="textFieldBeneficiaryName" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </VBox>
+    <VBox layoutX="1134.2" layoutY="408.0" spacing="10" AnchorPane.rightAnchor="20.0">
+        <Button fx:id="deleteButton" onAction="#deleteSingleSLfromList" styleClass="delete-button" text="Delete" />
+        <Button fx:id="clearButton" onAction="#clearTextFieldsevenNotSelected" styleClass="clear-button" text="Clear" />
+        <Button fx:id="validateButton" onAction="#validateSinisterLifeStatus" styleClass="validate-button" text="Validate" />
+        <Button fx:id="declineButton" onAction="#declineSinisterLifeStatus" styleClass="decline-button" text="Decline" />
+    </VBox>
+
+      <TextField fx:id="searchField" layoutX="594.0" layoutY="9.0" maxWidth="200.0" promptText="Search..." />
+
+</AnchorPane>

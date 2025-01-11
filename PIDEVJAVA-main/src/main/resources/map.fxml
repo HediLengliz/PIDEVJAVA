@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.MapController">
+
+    <VBox fx:id="address" alignment="CENTER" prefHeight="489.0" prefWidth="1196.0">
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </VBox>
+
+    <Button text="Select Your Location" onAction="#addMarkerOnClick"/>
+
+</VBox>

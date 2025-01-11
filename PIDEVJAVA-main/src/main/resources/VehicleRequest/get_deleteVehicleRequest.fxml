@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<AnchorPane prefHeight="419.0" prefWidth="1116.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.VehicleRequest.get_deleteVehicleRequest">
+    <children>
+        <TableView fx:id="VehicleRequestTable" layoutX="-1.0" layoutY="73.0" prefHeight="346.0" prefWidth="1105.0">
+            <columns>
+                <TableColumn fx:id="idVehicleRequest" prefWidth="100.79998779296875" text="Id" />
+                <TableColumn fx:id="dateColumn" prefWidth="121.60003662109375" text="Date" />
+                <TableColumn fx:id="statusColum" prefWidth="114.39996337890625" text="Status" />
+                <TableColumn fx:id="marqueColumn" prefWidth="114.39996337890625" text="Marque" />
+                <TableColumn fx:id="modeleColumn" prefWidth="114.39996337890625" text="Modele" />
+                <TableColumn fx:id="matriculNumberColumn" prefWidth="114.39996337890625" text="Matricule" />
+                <TableColumn fx:id="serialNumberColumn" prefWidth="114.39996337890625" text="N° serie" />
+                <TableColumn fx:id="fabYearColumn" prefWidth="114.39996337890625" text="Annee fab" />
+                <TableColumn fx:id="vehiclePriceColumn" prefWidth="114.39996337890625" text="Prix" />
+                <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="79.20001220703125" style="-fx-alignment: center;" text="Action" />
+
+
+
+            </columns>
+        </TableView>
+
+        <TextField fx:id="keywordTextField" layoutX="794.0" layoutY="14.0" onKeyTyped="#addEmployeeSearch" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #FFFFFF; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+
+    </children>
+</AnchorPane>

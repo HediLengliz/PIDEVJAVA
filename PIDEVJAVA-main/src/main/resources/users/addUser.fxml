@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.User.AddUser">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <children>
+        <!-- Labels and TextFields -->
+        <Label layoutX="77.0" layoutY="142.0" text="Email">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="emailTF" layoutX="150.0" layoutY="138.0" />
+        <Label fx:id="emailErrorLabel" layoutX="350.0" layoutY="141.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <Label layoutX="77.0" layoutY="317.0" text="Roles">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <CheckComboBox fx:id="rolesLV" layoutX="149.0" layoutY="312.0" prefHeight="26.0" prefWidth="150.0">
+            <items>
+                <String fx:value="Expert" />
+                <String fx:value="Pharmacist" />
+                <String fx:value="Doctor" />
+                <String fx:value="Agent" />
+                <String fx:value="Sous Admin" />
+                <String fx:value="Admin" />
+                <String fx:value="Super Admin" />
+
+            </items></CheckComboBox>
+        <Label fx:id="rolesErrorLabel" layoutX="350.0" layoutY="316.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <!-- Add your CheckListView for roles here -->
+
+        <Label layoutX="77.0" layoutY="51.0" text="First name">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="firstNameTF" layoutX="150.0" layoutY="47.0" />
+        <Label fx:id="firstNameErrorLabel" layoutX="350.0" layoutY="51.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <Label layoutX="77.0" layoutY="97.0" text="Last Name">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="lastNameTF" layoutX="150.0" layoutY="93.0" />
+        <Label fx:id="lastNameErrorLabel" layoutX="350.0" layoutY="96.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <Label layoutX="82.0" layoutY="189.0" text="CIN">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="cinTF" layoutX="150.0" layoutY="185.0" />
+        <Label fx:id="cinErrorLabel" layoutX="350.0" layoutY="188.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <Label layoutX="80.0" layoutY="234.0" text="Address">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="addressTF" layoutX="150.0" layoutY="230.0" />
+        <Label fx:id="addressErrorLabel" layoutX="350.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <Label layoutX="83.0" layoutY="275.0" text="Tel">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="phoneNumberTF" layoutX="150.0" layoutY="271.0" />
+        <Label fx:id="phoneNumberErrorLabel" layoutX="350.0" layoutY="274.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+
+        <!-- Add User Button -->
+        <Button layoutX="434.0" layoutY="366.0" mnemonicParsing="false" onAction="#addUser" styleClass="action-button" text="Add User" />
+
+        <!-- Back to List Button -->
+        <Button layoutX="336.0" layoutY="366.0" mnemonicParsing="false" onAction="#backToList" prefHeight="26.0" prefWidth="66.0" styleClass="action-button-back" text="Close" />
+
+        <Label fx:id="sqlerror" layoutX="149.0" layoutY="369.0" prefHeight="18.0" prefWidth="150.0" textFill="red" />
+        <Label layoutX="76.0" layoutY="14.0" text="Add User" textFill="#3b37b4">
+            <font>
+                <Font name="Bookman Old Style Bold" size="18.0" />
+            </font>
+        </Label>
+
+
+    </children>
+</AnchorPane>

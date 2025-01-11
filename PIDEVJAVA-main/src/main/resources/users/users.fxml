@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import org.example.utils.ActionsCellFactory?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.User.UsersController">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <children>
+        <TableView fx:id="usersTable" layoutX="50.0" layoutY="50.0" prefHeight="300.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="150"/>
+                <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="100"/>
+                <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="100"/>
+                <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="200">
+                    <cellFactory>
+                        <ActionsCellFactory/>
+                    </cellFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button text="Add User" layoutX="50.0" layoutY="370.0" onAction="#addUser"/>
+        <Button layoutX="150.0" layoutY="370.0" onAction="#logoutAction" text="logout" />
+
+    </children>
+</AnchorPane>

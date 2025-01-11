@@ -1,0 +1,57 @@
+.button {
+    -fx-background-color: #FFFFFF; /* Bleu */
+    -fx-text-fill: #5462ff; /* Blanc */
+
+}
+
+.button:hover {
+    -fx-background-color: #F0F8FF; /* Mauve clair */
+}
+
+.button:pressed {
+    -fx-background-color: #3B299B; /* Bleu plus foncé */
+}
+
+.scroll-pane {
+    -fx-background-color: #F0F8FF; /* Mauve clair */
+}
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.increment-button,
+.decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #F0F8FF; /* Bleu */
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #B0C4DE  ; /* Mauve clair */
+}
+.VBox {
+    -fx-background-color: #FFFFFF; /* Couleur de fond */
+    -fx-background-radius: 10px; /* Rayon de bordure */
+}
+
+.text-field {
+    -fx-background-radius: 10px; /* Rayon de bordure */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2); /* Ombre */
+}
+
+
+

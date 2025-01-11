@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="991.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-background-insets: 0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <Label fx:id="id" prefHeight="18.0" prefWidth="51.0" style="-fx-padding: 0 10 0 20;" text="ID" textFill="#101010" />
+        <Label fx:id="dateRequest" prefHeight="18.0" prefWidth="59.0" text="Date" textFill="#101010" />
+        <Label fx:id="status" prefHeight="18.0" prefWidth="56.0" text="staus" textFill="#101010" />
+        <Label fx:id="marque" prefHeight="18.0" prefWidth="60.0" text="Type" textFill="#101010" />
+        <Label fx:id="modele" prefHeight="18.0" prefWidth="88.0" text="Nb piece" textFill="#101010" />
+        <Label fx:id="serialNumber" prefHeight="18.0" prefWidth="94.0" text="adresse" textFill="#101010" />
+        <Label fx:id="matriculNumber" prefHeight="18.0" prefWidth="97.0" text="Valeur" textFill="#101010" />
+        <Label fx:id="vehiclePrice" prefHeight="18.0" prefWidth="107.0" text="surface" textFill="#101010" />
+        <Label fx:id="fabYear" prefHeight="18.0" prefWidth="113.0" text="surface" textFill="#101010">
+
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+
+        <Button  fx:id="btn" style="-fx-border-color: #301bef; -fx-border-radius: 20; -fx-background-color: #301bef;" text="Delete" >
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Button>
+        <FontAwesomeIconView visible="false" fx:id="icon" style="-fx-border-color: #301bef; -fx-border-radius: 20; -fx-background-color: #301bef;" text="Delete" >
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </FontAwesomeIconView>
+
+
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

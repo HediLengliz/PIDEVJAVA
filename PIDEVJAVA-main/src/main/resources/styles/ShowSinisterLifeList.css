@@ -1,0 +1,169 @@
+.root {
+    -fx-background-color: #F5F6FA;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.label, .title-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c387e;
+    -fx-font-size: 12px;
+}
+
+.table-view {
+    -fx-base: #FFFFFF;
+    -fx-control-inner-background: #FFFFFF;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 4px 7px;
+    -fx-font-size: 16px; /* Adjusted for better readability */
+}
+
+.text-field:focused {
+    -fx-border-color: #0099ff;
+    -fx-background-color: #fff;
+    -fx-box-shadow: 0 0 10px #0099ff;
+}
+
+.button, .delete-button, .clear-button, .validate-button, .decline-button, .update-button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button {
+    -fx-background-color: #1976D2;
+}
+
+.button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.delete-button {
+    -fx-background-color: #D32F2F;
+}
+
+.delete-button:hover {
+    -fx-background-color: #C62828;
+}
+
+.clear-button {
+    -fx-background-color: #1976D2; /* Blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.clear-button:hover {
+    -fx-background-color: #1565C0; /* Darker Blue on hover */
+}
+
+.validate-button {
+    -fx-background-color: #4CAF50;
+}
+
+.validate-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+.decline-button {
+    -fx-background-color: #FBC02D; /* Yellow */
+    -fx-text-fill: #333; /* Text color for better contrast */
+    -fx-font-weight: bold;
+}
+
+.decline-button:hover {
+    -fx-background-color: #F9A825;
+}
+
+.update-button {
+    -fx-background-color: #4CAF50; /* Green background */
+}
+
+.update-button:hover {
+    -fx-background-color: #388E3C; /* Darker green on hover */
+}
+
+.button-box {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+/* GridPane styles */
+.grid-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.sort-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c387e;
+    -fx-font-size: 14px;
+}
+
+/* ComboBox for the sort options */
+.sort-combobox {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 4px;
+}
+
+/* ComboBox arrow button styling */
+.sort-combobox .arrow-button {
+    -fx-background-color: #ddd;
+}
+
+/* ComboBox list cell styling */
+.sort-combobox .list-cell {
+    -fx-padding: 4px 10px;
+    -fx-text-fill: #333;
+}
+
+.sort-combobox:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Ensure ComboBox dropdown list matches style */
+.sort-combobox .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+}
+
+.sort-combobox .list-view .list-cell:filled:selected, .sort-combobox .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333;
+}
+.button-pdf-export {
+    -fx-background-image: url('/images/pdf.png');
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+}
+.table-view .column-header {
+    -fx-background-color: #1976D2; /* Set your header background color here */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF; /* Set your header text color here */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}

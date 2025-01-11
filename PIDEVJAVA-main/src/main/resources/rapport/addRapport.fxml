@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="358.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.rapport.addRapportController">
+
+
+            <children>
+                <VBox layoutX="245.0" layoutY="113.0" spacing="10">
+                    <HBox prefHeight="0.0" prefWidth="275.0" spacing="10" />
+                    <HBox prefHeight="96.0" prefWidth="275.0" spacing="10">
+                        <Label text="Justification:" />
+                        <TextArea fx:id="justificationTextArea" prefHeight="100" prefWidth="200" />
+                    </HBox>
+                </VBox>
+
+
+        <Button layoutX="329.0" layoutY="279.0" onAction="#handleAddRapport" text="Add Rapport" />
+
+        <ImageView fitHeight="204.0" fitWidth="255.0" layoutX="13.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@2981-rapport-de-stage-removebg-preview.png" />
+        </image>
+        </ImageView>
+        <Label layoutX="59.0" layoutY="52.0" style="-fx-font-size: 18px;" text="Add Rapport" />
+      <Label fx:id="justifictionErrorLabel" layoutX="324.0" layoutY="230.0" prefHeight="17.0" prefWidth="178.0" textFill="#ff0a0a" />
+                  <Label layoutX="244.0" layoutY="67.0" text="Decision:" />
+                  <ComboBox fx:id="decisionComboBox" layoutX="317.0" layoutY="63.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label fx:id="decisionErrorLabel" layoutX="317.0" layoutY="92.0" prefHeight="17.0" prefWidth="178.0" textFill="#ff0a0a" />
+    </children>
+</AnchorPane>

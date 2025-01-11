@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="492.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Reclamation.ShowReclamationDetals">
+    <children>
+        <Label layoutX="74.0" layoutY="14.0" text="User Reclamation">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <Label layoutX="74.0" layoutY="78.0" text="Title">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="titleField" editable="false" layoutX="74.0" layoutY="111.0" prefHeight="26.0" prefWidth="188.0" />
+        <Label layoutX="74.0" layoutY="237.0" text="Description">
+            <font>
+                <Font name="Britannic Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descriptionArea" editable="false" layoutX="74.0" layoutY="271.0" prefHeight="168.0" prefWidth="494.0" />
+      <Label layoutX="74.0" layoutY="160.0" text="Date">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="datereclamation" editable="false" layoutX="74.0" layoutY="194.0" prefHeight="26.0" prefWidth="188.0" />
+    </children>
+</AnchorPane>

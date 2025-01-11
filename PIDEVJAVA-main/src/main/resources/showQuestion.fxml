@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1433.0" style="-fx-background-color: #F0F8FF;" stylesheets="styleService.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.ShowQuestionController">
+    <children>
+        <Pane prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+
+                <Label layoutX="95.0" layoutY="171.0" text="Jimmy Fallon" textFill="#e7e5e5">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+
+                <Button fx:id="btnVie" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Demande assurance maladie" textFill="#4d5aec">
+                    <graphic>
+
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnHabitat" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Demande assurance habitat">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnVehicule" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Demande assurance vehicule">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnContratVie" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Contrat assurance maladie">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnContratHabitat" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Contrat assurance habitat">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnContratVehicule" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Contrat assurance vehicule">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnSinistresV" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sinistre vehicule">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnSinistresH" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sinistre habitat">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnSinisterLife" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sinistre Vie">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnRapport" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="538.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Liste des rapports">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnGetUsers" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Liste des utilisateurs">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnGetReclamations" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="575.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Liste des reclamations">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnQuestion" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="611.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Question des devis">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnarticle" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="645.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Ajouter article">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnComment" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Ajouter commentaire">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="logout" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="-4.0" layoutY="722.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Logout">
+                    <graphic>
+
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="123.0" fitWidth="128.0" layoutX="78.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/admin.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="1170.0" style="-fx-background-color: #F0F8FF;">
+            <children>
+                <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" />
+                <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+                <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0" />
+                <Pane fx:id="pnlOverview" prefHeight="564.0" prefWidth="975.0">
+                    <children>
+                        <VBox fx:id="pnItems" layoutX="35.0" layoutY="195.0" prefHeight="392.0" prefWidth="1100.0" spacing="5.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+                            <children>
+                                    <Pane prefHeight="265.0" prefWidth="1100.0">
+                            <GridPane layoutX="29.0" layoutY="78.0" prefHeight="122.0" prefWidth="473.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="77.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label text="Question">
+                                        <font>
+                                            <Font name="System Bold" size="15.0" />
+                                        </font>
+                                    </Label>
+                                    <Label text="Type" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font name="System Bold" size="15.0" />
+                                        </font>
+                                    </Label>
+                                    <Label text="Priority" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font name="System Bold" size="15.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="questionLabel" text="Label" GridPane.columnIndex="1">
+                                    <font>
+                                       <Font size="15.0" />
+                                    </font></Label>
+                                    <Label fx:id="typeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                       <Font size="15.0" />
+                                    </font></Label>
+                                    <Label fx:id="priorityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <font>
+                                       <Font size="15.0" />
+                                    </font></Label>
+                                </children>
+                            </GridPane>
+                            <Button layoutX="86.0" layoutY="233.0" mnemonicParsing="false" onAction="#deleteQuestion" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #1976D2; -fx-background-radius: 20px;" text="Delete" textFill="#ffffff">
+                              <font>
+                                 <Font name="System Bold" size="15.0" />
+                              </font></Button>
+                            <Button layoutX="798.0" layoutY="212.0" mnemonicParsing="false" onAction="#addService" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: #1976D2; -fx-background-radius: 20px;" text="new service" textFill="ffffff">
+                              <font>
+                                 <Font name="System Bold" size="16.0" />
+                              </font></Button>
+
+
+                            <Label layoutX="29.0" layoutY="23.0" prefHeight="31.0" prefWidth="259.0" text="Détails de la question">
+                                <font>
+                                    <Font name="System Bold" size="20.0" />
+                                </font>
+                            </Label>
+                            <TableView fx:id="ServiceTable" layoutX="533.0" layoutY="70.0" prefHeight="122.0" prefWidth="404.0">
+                                <columns>
+                                    <TableColumn prefWidth="68.0" text="ID">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="id" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="107.0" text="name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="123.0" text="price">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="price" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="actionColumn" prefWidth="103.0" text="Action" />
+                                </columns>
+                            </TableView>
+                           <Label layoutX="533.0" layoutY="23.0" text="Liste des reponses">
+                              <font>
+                                 <Font name="System Bold" size="20.0" />
+                              </font>
+                           </Label>
+                                    </Pane>
+</children>
+                        </VBox>
+                        <Label fx:id="lblTitle" layoutX="57.0" layoutY="25.0" text="Demandes assurance maladie" textFill="#5462ff">
+                            <font>
+                                <Font name="System Bold Italic" size="24.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="22000" textFill="#2a73ff">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Total Orders" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="1500" textFill="#26bfbc">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Total delivered" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="1000" textFill="#fa5f7e">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Peding Orders" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="780" textFill="#de0000">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Orders on Hold" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>

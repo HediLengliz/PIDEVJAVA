@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import org.controlsfx.control.CheckListView?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.User.Updateprofile">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <children>
+        <VBox layoutX="50.0" layoutY="50.0" spacing="5" alignment="CENTER">
+
+
+            <Label text="Email" />
+            <TextField fx:id="emailTF" />
+            <Label fx:id="emailErrorLabel" textFill="red" />
+
+
+
+            <!-- Add your CheckListView for roles here -->
+
+            <Label text="First name" />
+            <TextField fx:id="firstNameTF" />
+            <Label fx:id="firstNameErrorLabel" textFill="red" />
+
+            <Label text="Last Name" />
+            <TextField fx:id="lastNameTF" />
+            <Label fx:id="lastNameErrorLabel" textFill="red" />
+
+            <Label text="CIN" />
+            <TextField fx:id="cinTF" />
+            <Label fx:id="cinErrorLabel" textFill="red" />
+
+            <Label text="Address" />
+            <TextField fx:id="addressTF" />
+            <Label fx:id="addressErrorLabel" textFill="red" />
+
+            <Label text="Tel" />
+            <TextField fx:id="phoneNumberTF" />
+            <Label fx:id="phoneNumberErrorLabel" textFill="red" />
+
+
+            <HBox spacing="10">
+                <Button text="Update" onAction="#updateUser" styleClass="action-button" />
+                <Button text="Back to List" onAction="#backToList" styleClass="action-button-back" />
+            </HBox>
+        </VBox>
+        <Label fx:id="sqlerror" layoutX="90.0" layoutY="550.0" textFill="red" />
+
+    </children>
+</AnchorPane>

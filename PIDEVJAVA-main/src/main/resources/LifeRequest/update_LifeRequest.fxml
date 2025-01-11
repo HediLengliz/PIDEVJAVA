@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.LifeRequest.update_LifeRequest">
+    <children>
+        <VBox layoutX="50.0" layoutY="50.0" spacing="10">
+            <Label text="Update Life Request" />
+            <TextField fx:id="age" promptText="age" />
+            <TextField fx:id="chronicDisease" promptText="Maladie chronique" />
+            <TextField fx:id="chronicDiseaseDescription" promptText="Détails" />
+            <TextField fx:id="surgery" promptText="Operation" />
+            <TextField fx:id="civilStatus" promptText="Etat civil" />
+            <TextField fx:id="occupation" promptText="Profession" />
+
+
+            <HBox spacing="10">
+                <Button text="Update" onAction="#updateLifeRequest" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

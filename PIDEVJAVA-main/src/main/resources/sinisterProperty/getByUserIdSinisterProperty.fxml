@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.sinisterProperty.GetByUserIdSinisterPropertyController">
+    <children>
+        <VBox layoutX="50.0" layoutY="50.0" spacing="10.0">
+            <Label text="List of Sinister Properties by user" style="-fx-font-size: 24px; -fx-text-fill: black;" />
+
+            <TextField fx:id="userIdTextField" promptText="Enter User ID"/>
+
+            <Button text="Display Properties" onAction="#getByUserId" style="-fx-background-color: #781C10; -fx-text-fill: white;" />
+
+            <TableView fx:id="propertyTableView" prefHeight="200.0" style="-fx-background-color: white;">
+                <columns>
+
+                    <TableColumn text="Date of Sinister" fx:id="dateColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="date_sinister" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Location" fx:id="locationColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="location" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Status" fx:id="labelStatusSinister" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="status_sinister" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Type of Damage" fx:id="typeColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="type_degat" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Description of Damage" fx:id="descriptionColumn" prefWidth="200">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="description_degat" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Action" fx:id="actionColumn" />
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.ContratHabitat.update_ContratHabitat">
+    <children>
+      <Pane layoutX="133.0" layoutY="39.0" prefHeight="291.0" prefWidth="371.0" style="-fx-background-color: #fffff; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+         <children>
+              <VBox layoutX="89.0" layoutY="11.0" spacing="10">
+                  <Label text="Update Contrat Habitat" textFill="#5462ff">
+                  <font>
+                     <Font name="System Bold" size="17.0" />
+                  </font></Label>
+                  <DatePicker fx:id="dateDebut" promptText="Date debut" />
+                  <DatePicker fx:id="dateFin" promptText="Date fin" />
+                  <TextField fx:id="description" promptText="Description" />
+                  <TextField fx:id="prix" promptText="Prix" />
+                  <TextField fx:id="matriculeAgent" promptText="Matricule Agent" />
+      
+      
+                  <HBox spacing="10" />
+              </VBox>
+                <Button layoutX="222.0" layoutY="270.0" onAction="#updateContratHabitat" style="-fx-background-color: #5462ff;" text="Update" textFill="WHITE" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

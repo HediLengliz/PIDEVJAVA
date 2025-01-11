@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox prefHeight="430.0" prefWidth="443.0" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.addcomment">
+    <children>
+        <HBox spacing="10">
+            <ImageView fx:id="profileImage" fitHeight="50.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../kk/659A5034.jpg" />
+            </image></ImageView>
+            <Label fx:id="username" text="Username" />
+        </HBox>
+        <Label fx:id="comment" prefHeight="18.0" prefWidth="78.0" style="-fx-background-color: Darkblue;" text="Comment" textFill="WHITE" wrapText="true" />
+      <TextArea fx:id="descriptionTextArea" prefHeight="200.0" prefWidth="200.0" promptText="write a comment..." />
+        <Rating fx:id="rating" cache="true" cacheHint="QUALITY" onMouseClicked="#RATE" partialRating="true" prefHeight="32.0" prefWidth="266.0" rating="2.5" style="-fx-background-color: white;" updateOnHover="true">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <effect>
+            <ColorAdjust brightness="0.09" hue="-0.95" saturation="-0.13" />
+         </effect>
+      </Rating>
+      <Button fx:id="postComment" mnemonicParsing="false" onAction="#postComment" prefHeight="26.0" prefWidth="444.0" style="-fx-background-color: DARKBLUE;" text="Post" textFill="WHITE" />
+    </children>
+</VBox>

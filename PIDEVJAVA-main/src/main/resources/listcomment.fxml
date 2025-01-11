@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane prefHeight="429.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.listcomment">
+   <children>
+      <TableView fx:id="commentTableView" layoutX="28.0" layoutY="131.0" prefHeight="254.0" prefWidth="536.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="120.800048828125" text="ID" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="305.5999755859375" text="Description" />
+            <TableColumn fx:id="ratingColumn" prefWidth="111.20001220703125" text="Rating" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="92.0" layoutY="89.0" onAction="#Search" promptText="search here...." />
+      <Label layoutX="36.0" layoutY="93.0" text="Search" />
+      <Pane layoutX="-2.0" layoutY="-3.0" prefHeight="108.0" prefWidth="756.0">
+         <children>
+            <ImageView fitHeight="166.0" fitWidth="763.0" layoutX="-5.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/counts-bg.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="22.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment List">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button layoutX="574.0" layoutY="131.0" mnemonicParsing="false" onAction="#addcomment" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: darkblue;" text="Add Commet" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="578.0" layoutY="385.0" mnemonicParsing="false" onAction="#PDF" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: darkblue;" text="PDF" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="574.0" layoutY="183.0" mnemonicParsing="false" onAction="#updatecomment" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: darkblue;" text="Update Comment" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="574.0" layoutY="242.0" mnemonicParsing="false" onAction="#deletecomment" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: darkblue;" text="Delete Comment" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ComboBox layoutX="400.0" layoutY="89.0" onAction="#ComboBox" prefWidth="150.0" promptText="sort comment by">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Description (ASC)"/>
+            <String fx:value="Description (DESC)"/>
+            <String fx:value="Rate (ASC)"/>
+            <String fx:value="Rate (DESC)"/>
+         </FXCollections>
+      </items>
+   </ComboBox>
+   </children>
+</AnchorPane>

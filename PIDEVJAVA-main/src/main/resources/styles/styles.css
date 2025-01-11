@@ -1,0 +1,134 @@
+/* styles.css */
+
+/* AnchorPane */
+.root {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+}
+
+/* TableView */
+#QuestionTable {
+    -fx-background-color: #ffffff; /* White background */
+}
+
+/* TableColumn headers */
+.table-column {
+    -fx-alignment: CENTER_LEFT; /* Align text to the left */
+    -fx-font-weight: bold; /* Bold font for headers */
+}
+
+/* Button */
+.button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-weight: bold; /* Bold font */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+/* Define the style for the service buttons */
+.service-button {
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Hover effect for the service buttons */
+.service-button:hover {
+    -fx-background-color: #45a049; /* Darker green */
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+/* Define variables */
+.dark {
+    -fx-base: #292929;
+}
+
+.light {
+    -fx-base: #efefef;
+}
+
+.red {
+    -fx-base: #D91E18;
+}
+
+.green {
+    -fx-base: #2ECC71;
+}
+
+.blue {
+    -fx-base: #4183D7;
+}
+
+.font-stack {
+    -fx-font-family: "Lato", sans-serif;
+}
+
+.small {
+    -fx-font-size: 40em;
+}
+
+* {
+    -fx-box-sizing: border-box;
+}
+
+html, body {
+    -fx-min-height: 100%;
+}
+
+html {
+    -fx-background-color: #444;
+}
+
+body {
+    -fx-min-height: 100%;
+    -fx-overflow: hidden;
+}
+
+
+.button-wrap {
+    -fx-alignment: center;
+    -fx-translate-y: 50%;
+}
+
+.button-label {
+    -fx-padding: 1em 2em;
+    -fx-margin: 0.5em;
+    -fx-cursor: hand;
+    -fx-text-fill: #292929;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0.25em;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-transition-duration: 0.3s;
+    -fx-user-select: none;
+}
+@for $i from 1 through 100 {
+    #$i:selected {
+        -fx-background-color: #2ECC71;
+        -fx-text-fill: #efefef;
+    }
+}
+
+
+
+
+.button-label:pressed {
+    -fx-translate-y: 2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0.22);
+
+}
+
+
+
+
+.hidden {
+    -fx-display: none;
+}
+
+

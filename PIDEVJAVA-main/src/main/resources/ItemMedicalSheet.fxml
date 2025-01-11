@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="1134.0" spacing="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <Label fx:id="id" prefHeight="18.0" prefWidth="44.0" text="ID" textFill="#101010" />
+        <Label fx:id="sinister_life_id" prefHeight="18.0" prefWidth="115.0" text="Sinister Life ID" textFill="#101010" />
+        <Label fx:id="user_cin_id" prefHeight="18.0" prefWidth="74.0" text="User ID" textFill="#101010" />
+        <Label fx:id="medical_diagnosis" prefHeight="18.0" prefWidth="136.0" text="Medical Diagnosis" textFill="#101010" />
+        <Label fx:id="treatment_plan" prefHeight="18.0" prefWidth="118.0" text="Treatment Plan" textFill="#101010" />
+        <Label fx:id="medical_reports" prefHeight="18.0" prefWidth="122.0" text="Medical Reports" textFill="#101010" />
+        <Label fx:id="duration_of_incapacity" prefHeight="18.0" prefWidth="121.0" text="Duration Of Incapacity" textFill="#101010" />
+
+            <Label fx:id="medical_information" prefHeight="18.0" prefWidth="121.0" text="Medical Information" textFill="#101010">
+
+
+
+
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+
+
+
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

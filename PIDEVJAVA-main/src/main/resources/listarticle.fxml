@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="599.0" prefWidth="1271.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.listarticle">
+    <TableView fx:id="articleTableView" layoutX="49.0" layoutY="234.0" prefHeight="348.0" prefWidth="736.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="125.5999755859375" text="ID" />
+            <TableColumn fx:id="titleColumn" minWidth="0.0" prefWidth="76.80003356933594" text="Title" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="134.40003967285156" text="Description" />
+            <TableColumn fx:id="authorNameColumn" prefWidth="165.5999755859375" text="Author Name" />
+            <TableColumn fx:id="dateColumn" prefWidth="100" text="Date" />
+         <TableColumn fx:id="imageColumn" prefWidth="100" text="Image">
+            <graphic>
+               <ImageView fx:id="imageView" fitHeight="73.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+         </TableColumn>
+            <TableColumn fx:id="categoryColumn" prefWidth="100" text="Category" />
+        </columns>
+    </TableView>
+    <Pane layoutY="-10.0" prefHeight="151.0" prefWidth="1271.0" style="-fx-background-color: darkblue;">
+        <children>
+            <Text fill="WHITE" layoutX="23.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Articles" wrappingWidth="374.7830753326416">
+                <font>
+                    <Font size="38.0" />
+                </font>
+            </Text>
+            <!--         <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="1212.0" layoutY="65.0" onMouseClicked="#close" size="45" wrappingWidth="44.04997539520264" />-->
+        </children>
+        <effect>
+            <Bloom threshold="0.32" />
+        </effect>
+        <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+        </cursor>
+    </Pane>
+    <Button fx:id="UpdateArticle" layoutX="1045.0" layoutY="362.0" mnemonicParsing="false" onAction="#UpdateArticle" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: Darkblue;" text="Update Article" textFill="WHITE" />
+    <Button fx:id="deleteArticle" layoutX="1045.0" layoutY="458.0" mnemonicParsing="false" onAction="#deleteArticle" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: darkblue;" text="Delete" textFill="WHITE" />
+    <TextField fx:id="search" layoutX="49.0" layoutY="194.0" onAction="#search" prefHeight="26.0" prefWidth="485.0" />
+    <Text layoutX="49.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search :" wrappingWidth="143.20000000000005">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Text>
+    <Button layoutX="1045.0" layoutY="536.0" mnemonicParsing="false" onAction="#PDF" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: darkblue;" text="PDF" textFill="WHITE" />
+    <Button fx:id="addarticle" layoutX="1045.0" layoutY="277.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#addarticle" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: darkblue;" text="Add article" textFill="WHITE" />
+<!--    <ComboBox layoutX="400.0" layoutY="89.0" onAction="#ComboBox" prefWidth="150.0" promptText="sort Article by">-->
+<!--        <items>-->
+<!--            <FXCollections fx:factory="observableArrayList">-->
+<!--                <String fx:value=""/>-->
+<!--                <String fx:value=""/>-->
+<!--                <String fx:value=""/>-->
+<!--                <String fx:value=""/>-->
+<!--            </FXCollections>-->
+<!--        </items>-->
+<!--    </ComboBox>-->
+    <ImageView fx:id="imageVieww" fitHeight="86.0" fitWidth="164.0" layoutX="636.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+        <clip>
+            <Circle centerX="35.0" centerY="35.0" radius="35.0" />
+        </clip>
+
+          </ImageView>
+   <ComboBox fx:id="filterComboBox" onAction="#handleFilterChange" layoutX="826.0" layoutY="277.0" prefWidth="150.0" >
+
+   </ComboBox>
+   <Text layoutX="826.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="trier par  catégorie :" /></AnchorPane>

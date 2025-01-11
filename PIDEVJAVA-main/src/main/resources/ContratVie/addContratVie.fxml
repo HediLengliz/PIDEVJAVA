@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="441.0" prefWidth="672.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.ContratVie.addContratVie">
+    <children>
+      <Pane layoutX="22.0" layoutY="109.0" prefHeight="214.0" prefWidth="212.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+         <children>
+            <GridPane layoutX="14.0" layoutY="12.0" prefHeight="190.0" prefWidth="191.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+              </rowConstraints>
+               <children>
+                      <Label text="Age:" textFill="#4d00ff" />
+                      <Label text="Chronic Disease:" textFill="#4d00ff" GridPane.rowIndex="1" />
+                      <Label text="Surgery:" textFill="#4d00ff" GridPane.rowIndex="2" />
+                      <Label text="Civil Status:" textFill="#4d00ff" GridPane.rowIndex="3" />
+                      <Label text="Occupation:" textFill="#4d00ff" GridPane.rowIndex="4" />
+                      <Label text="Details Disease:" textFill="#4d00ff" GridPane.rowIndex="5" />
+                   <Label text="Id:" textFill="#4d00ff" GridPane.rowIndex="6" />
+      
+                         <Label fx:id="ageLabel" GridPane.columnIndex="1" />
+                      <Label fx:id="chronDiseaseLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                      <Label fx:id="surgeryLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                      <Label fx:id="civilStatusLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                      <Label fx:id="occupationLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                      <Label fx:id="detailsDiseaseLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                   <Label fx:id="idLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane layoutX="269.0" layoutY="80.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+         <children>
+                <Label layoutX="11.0" layoutY="48.0" text="Id demande" textFill="#4d00ff" wrapText="true" />
+                <Label layoutX="10.0" layoutY="83.0" text="Date du debut du contrat" textFill="#4d00ff" />
+                <Label layoutX="10.0" layoutY="161.0" text="Description du contrat" textFill="#4d00ff" />
+                <Label layoutX="13.0" layoutY="241.0" text="Prix" textFill="#4d00ff" />
+                <Label layoutX="10.0" layoutY="199.0" text="Matricule agent" textFill="#4d00ff" />
+                <Label layoutX="9.0" layoutY="125.0" text="Date de la  fin du contrat" textFill="#4d00ff" />
+      
+                           <!-- Form AnchorPane -->
+               <AnchorPane layoutX="121.0" layoutY="-39.0" prefHeight="364.0" prefWidth="212.0">
+                   <Button layoutX="128.0" layoutY="320.0" mnemonicParsing="false" onAction="#addContratVie" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #5462ff; -fx-text-fill: white; -fx-font-size: 10pt; -fx-padding: 10px 20px;" text="Ajouter" AnchorPane.topAnchor="320.0" />
+                   <TextField fx:id="request" editable="false" layoutX="50.0" layoutY="80.0" />
+                   <DatePicker fx:id="dateDebut" layoutX="51.0" layoutY="117.0" />
+                   <DatePicker fx:id="dateFin" layoutX="50.0" layoutY="161.0" />
+                   <TextField fx:id="description" layoutX="52.0" layoutY="199.0" />
+                   <TextField fx:id="matriculeAgent" layoutX="52.0" layoutY="239.0" />
+                   <TextField fx:id="prix" layoutX="52.0" layoutY="283.0" />
+                   <Label fx:id="dateDebutLabel" layoutX="51.0" layoutY="143.0" prefHeight="18.0" prefWidth="118.0" textFill="red" />
+                   <Label fx:id="dateFinLabel" layoutX="52.0" layoutY="180.0" textFill="red" />
+                   <Label fx:id="descriptionLabel" layoutX="52.0" layoutY="222.0" textFill="red" />
+                   <Label fx:id="matriculeAgentLabel" layoutX="52.0" layoutY="267.0" textFill="red" />
+                   <Label fx:id="prixLabel" layoutX="52.0" layoutY="310.0" textFill="red" />
+               </AnchorPane>
+         </children>
+      </Pane>
+          <Label layoutX="40.0" layoutY="32.0" prefHeight="54.0" prefWidth="175.0" text="Details  de la demande " textFill="#5462ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="32.0" prefHeight="54.0" prefWidth="147.0" text="Contrat assurance vie" textFill="#5462ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+    </children>
+
+</AnchorPane>
